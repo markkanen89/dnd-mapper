@@ -1,0 +1,105 @@
+<HTML>
+    <HEAD>
+        <TITLE>DND THINGY</TITLE>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js" integrity="sha256-59/apVFrosMLFX2dHZLGvb3nPpu7e0Yx1rsDr1dTRrk=" crossorigin="anonymous"></script>
+    </HEAD>
+    <script>
+        var angle = 0;
+        $(function () {
+            $(":file").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = imageIsLoaded;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+
+        function imageIsLoaded(e) {
+            $('#map').attr('src', e.target.result);
+        };
+
+        function ResizeGrid() {
+            var image = document.getElementById('grid'),
+                ranger = document.getElementById('grid-scale');
+            image.style.width = 50*(ranger.value / 1)+'px';
+        }
+
+        function ResizeImage() {
+        var image = document.getElementById('map'),
+            ranger = document.getElementById('image-scale');
+        image.style.width = 50*(ranger.value / 1)+'px';
+        }
+
+        function ChooseGrid(color) {
+            var grid = document.getElementById('grid')
+            if (color == 'b') {
+                grid.src = 'black.png';
+            } else if (color == 'w') {
+                grid.src = 'white.png';
+            }
+        }
+
+        function GridOpacity() {
+            var image = document.getElementById('grid'),
+                ranger = document.getElementById('grid-op');
+            image.style.opacity = (ranger.value / 100);
+        }
+
+        function RotateImage(rot) {
+            var image = document.getElementById('map')
+            if (rot == 'l') {
+                angle += 90;
+            } else if (rot == 'r') {
+                angle -= 90;
+            }
+                image.style.transform = 'rotate(' + angle + 'deg)';
+        }
+
+        function CreateImage() {
+            console.log('Merge image here TEST');
+        }
+    </script>
+    <BODY>
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-md-12">
+        			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                        <input type='file' id='mapimage' name="map-image" />
+        				<div class="ml-auto">
+                            <button class='btn-primary' onclick='CreateImage()'>Create Image</button>
+                        </div>
+        				<div class="ml-auto">
+                            <button class='btn-primary' onclick='ChooseGrid("w")'>White</button>
+                            <button class='btn-primary' onclick='ChooseGrid("b")'>Black</button>
+                        </div>
+        				<div class="ml-auto">
+                            <button class='btn-primary' onclick='RotateImage("l")'>↶</button>
+                            <button class='btn-primary' onclick='RotateImage("r")'>↷</button>
+                        </div>
+        				<div class="ml-auto">
+        					<ul class="navbar-nav ml-md-auto">
+                                <label>Image</label>
+                                <input id='image-scale' type="range" class="custom-range" oninput="ResizeImage()" >
+        					</ul>
+        					<ul class="navbar-nav ml-md-auto">
+                                <label>Grid</label>
+                                <input id='grid-scale' type="range" class="custom-range" oninput="ResizeGrid()" >
+        					</ul>
+        					<ul class="navbar-nav ml-md-auto">
+                                <label>Opacity</label>
+                                <input id='grid-op' type="range" class="custom-range" oninput="GridOpacity()" min="1" max="100">
+        					</ul>
+        				</div>
+        			</nav>
+        			<div id="map-div">
+                        <img id="map" src="" style='position: absolute; top: 115px; left 10px;'/>
+                        <img id="grid" src="" style='position: absolute; top: 115px; left 10px;'/>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </BODY>
+</HTML>
