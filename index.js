@@ -73,7 +73,7 @@ function setGridOffset() {
     $('#grid-container svg').css("top", offsetY - defaultOffsetY)
 };
 
-function setGridColor() {
+function setTileProperties() {
     var
         red = parseInt($("#r").val()),
         green = parseInt($("#g").val()),
@@ -88,5 +88,5 @@ function setGridColor() {
 var rebuildGrid = function () {
     makeGrid();
     setGridOffset();
-    setGridColor();
+    setTileProperties();
 };
