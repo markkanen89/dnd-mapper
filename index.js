@@ -44,7 +44,7 @@ function RotateImage(rot) {
     } else if (rot == 'r') {
         angle -= 90;
     }
-        image.style.transform = 'rotate(' + angle + 'deg)';
+    image.style.transform = 'rotate(' + angle + 'deg)';
 };
 
 /* Grid Creation */
