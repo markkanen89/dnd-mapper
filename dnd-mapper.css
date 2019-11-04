@@ -1,0 +1,78 @@
+.hide-overflow {
+    overflow: hidden;
+}
+
+#grid-container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#grid-container svg {
+    position: relative;
+}
+
+#grid-container .hextile {
+    fill: transparent;
+    stroke: rgba(0, 0, 0, 0.4);
+    stroke-width: 1;
+}
+
+.map-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: -1;
+}
+
+#map-image {
+    max-width: 100%;
+    max-height: 100%;
+    transform: rotate(0deg);
+}
+
+#mapimage {
+    width: auto;
+}
+
+
+.settings-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    z-index: 10;
+    text-align: right;
+    background-color: rgb(200, 200, 200)
+}
+
+#settings-icon {
+    width: 50px;
+    height: 50px:
+}
+
+#settings-icon:hover {
+    cursor: pointer;
+}
+
+.settings {
+    text-align: left;
+    display: block;
+    background:
+}
+
+.settings div {
+    margin-top: 10px;
+}
+
+.settings div input {
+    width: 50px;
+    padding-left: 5px;
+}
+
+.settings div.rgba input {
+    width: 50px;
+
+}
