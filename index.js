@@ -12,26 +12,6 @@ function imageIsLoaded(e) {
     $('#map-image').attr('src', e.target.result);
 };
 
-function ResizeGrid() {
-    var image = document.getElementById('grid'),
-        ranger = document.getElementById('grid-scale');
-    image.style.width = 50*(ranger.value / 1)+'px';
-};
-
-function ChooseGrid(grid) {
-    if (grid == 'h') {
-        $('#grid').attr('src', 'hex.png');
-    } else if (grid == 's') {
-        $('#grid').attr('src', 'square.png');
-    }
-};
-
-function ResizeImage() {
-var image = document.getElementById('map-image'),
-    ranger = document.getElementById('image-scale');
-image.style.width = 50*(ranger.value / 1)+'px';
-};
-
 function ToggleSettings() {
     $(".settings").toggle()
 };
