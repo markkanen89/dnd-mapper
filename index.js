@@ -79,9 +79,11 @@ function setGridColor() {
         red = parseInt($("#r").val()),
         green = parseInt($("#g").val()),
         blue = parseInt($("#b").val()),
-        alpha = parseFloat($("#a").val());
+        alpha = parseFloat($("#a").val()),
+        strokeWidth = $("#strokeWidth").val();
 
-    $(".hextile").css("stroke", `rgba(${red}, ${green}, ${blue}, ${alpha}`)
+    $(".hextile").css("stroke", `rgba(${red}, ${green}, ${blue}, ${alpha}`);
+    $(".hextile").css("stroke-width", strokeWidth + "px");
 };
 
 var rebuildGrid = function () {
