@@ -66,9 +66,8 @@ function setGridOffset() {
         offsetY = parseInt($('#offsetY').val()),
         offsetX = parseInt($('#offsetX').val()),
         hextileBBox = document.getElementsByClassName("hextile")[0].getBBox(),
-        strokeWidth = parseInt($(".hextile").css("stroke-width")),
-        defaultOffsetX = (hextileBBox.width + strokeWidth) * 2,
-        defaultOffsetY = (hextileBBox.height + strokeWidth) * 2;
+        defaultOffsetX = hextileBBox.width * 2,
+        defaultOffsetY = hextileBBox.height * 2;
 
     $('#grid-container svg').css("left", offsetX - defaultOffsetX)
     $('#grid-container svg').css("top", offsetY - defaultOffsetY)
