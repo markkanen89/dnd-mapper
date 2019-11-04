@@ -52,7 +52,7 @@ function makeGrid() {
     var
         map = $("#map-image"),
         radius = parseInt($('#tilesize').val()) / 2,
-        columns = 2 + Math.ceil(map.width() / ( 1.3 * radius)),
+        columns = 2 + Math.ceil(map.width() / radius),
         rows = 2 + Math.ceil(map.height() / (1.6 * radius)),
         cssClass = 'hextile';
 
