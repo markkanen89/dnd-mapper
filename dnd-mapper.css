@@ -5,6 +5,7 @@
 #grid-container {
     margin: 0 auto;
     overflow: hidden;
+    transform: rotate(0deg);
 }
 
 #grid-container svg {

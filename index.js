@@ -25,6 +25,7 @@ function RotateImage(rot) {
         angle -= 90;
     }
     image.style.transform = 'rotate(' + angle + 'deg)';
+    $('#grid-container').css("transform", 'rotate(' + angle + 'deg)')
 };
 
 /* Grid Creation */
