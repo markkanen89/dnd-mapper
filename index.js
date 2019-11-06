@@ -1,3 +1,5 @@
+var map = $("#map-image")
+
 $(function () {
     $(":file").change(function () {
         if (this.files && this.files[0]) {
@@ -9,7 +11,7 @@ $(function () {
 });
 
 function imageIsLoaded(e) {
-    $('#map-image').attr('src', e.target.result);
+    map.attr('src', e.target.result);
 };
 
 function ToggleSettings() {
@@ -30,7 +32,6 @@ function RotateImage(rot) {
 /* Grid Creation */
 function makeGrid() {
     var
-        map = $("#map-image"),
         radius = parseInt($('#tilesize').val()) / 2,
         columns = 2 + Math.ceil(map.width() / radius),
         rows = 2 + Math.ceil(map.height() / (1.6 * radius)),
