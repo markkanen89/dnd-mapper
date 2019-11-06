@@ -75,3 +75,7 @@
     width: 50px;
 
 }
+
+.settings div input.check {
+    width: auto;
+}
