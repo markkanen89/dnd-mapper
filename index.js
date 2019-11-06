@@ -66,6 +66,11 @@ function setTileProperties() {
     $(".hextile").css("stroke-width", strokeWidth + "px");
 };
 
+function openPage(){
+    var win = window.open('', '_blank', 'toolbar=0,location=0,menubar=0');
+    win.document.write(document.documentElement.innerHTML);
+}
+
 var rebuildGrid = function () {
     makeGrid();
     setGridOffset();
