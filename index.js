@@ -20,9 +20,9 @@ var angle = 0;
 function RotateImage(rot) {
     var image = document.getElementById('map-image')
     if (rot == 'l') {
-        angle += 90;
-    } else if (rot == 'r') {
         angle -= 90;
+    } else if (rot == 'r') {
+        angle += 90;
     }
     image.style.transform = 'rotate(' + angle + 'deg)';
     $('#grid-container').css("transform", 'rotate(' + angle + 'deg)')
