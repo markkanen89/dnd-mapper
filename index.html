@@ -22,6 +22,10 @@
                         Select map: <input type="file" id="mapimage">
                     </div>
                     <div>
+                        Map width: <input type="number" id="mapWidth" value="0" onchange="setMapSize()">
+                        Fit to screen: <input type="checkbox" id="mapFit" value="" class="check" onchange="setMapSize()">
+                    </div>
+                    <div>
                         Grid tile size: <input type="number" id="tilesize" value="100" onchange="rebuildGrid()">
                         Stroke width: <input type="number" id="strokeWidth" value="2" onchange="rebuildGrid()">
                     </div>
