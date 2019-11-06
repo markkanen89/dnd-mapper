@@ -12,3 +12,5 @@ phases:
   build:
     commands:
       - aws s3 sync ./ $S3_BUCKET
+      - zip dnd-mapper.zip dnd-mapper.py
+      - aws update-function-code --function-name dnd-mapper --zip-file fileb://dnd-mapper.zip  # yamllint disable-line rule:line-length
