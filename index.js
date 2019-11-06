@@ -31,6 +31,25 @@ function RotateImage(rot) {
     image.style.transform = 'rotate(' + angle + 'deg)';
 };
 
+function setMapSize() {
+    var
+        size = parseInt($("#mapWidth").val())
+        fit = $("#mapFit")[0].checked
+
+    if (fit) {
+        map.css("max-width", "100vw")
+        map.css("max-height", "100vh")
+        map.css("width", "")
+        map.css("height", "")
+    } else {
+        map.css("max-width", "")
+        map.css("max-height", "")
+        map.css("width", size)
+        map.css("height", "")
+    }
+    rebuildGrid()
+}
+
 /* Grid Creation */
 function makeGrid() {
     var
