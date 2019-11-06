@@ -12,6 +12,8 @@ $(function () {
 
 function imageIsLoaded(e) {
     map.attr('src', e.target.result);
+    setMapSize()
+    rebuildGrid()
 };
 
 function ToggleSettings() {
