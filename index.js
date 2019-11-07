@@ -34,19 +34,16 @@ function RotateImage(rot) {
 
 function setMapSize() {
     var
-        size = parseInt($("#mapWidth").val())
+        width = parseInt($("#mapWidth").val())
+        height = parseInt($("#mapHeight").val())
         fit = $("#mapFit")[0].checked
 
     if (fit) {
         map.css("max-width", "100vw")
         map.css("max-height", "100vh")
-        map.css("width", "")
-        map.css("height", "")
     } else {
-        map.css("max-width", "")
-        map.css("max-height", "")
-        map.css("width", size)
-        map.css("height", "")
+        map.css("max-width", width)
+        map.css("max-height", height)
     }
     rebuildGrid()
 }
