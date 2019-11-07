@@ -60,27 +60,38 @@
 .settings {
     text-align: left;
     display: block;
-    background:
+    line-height: 2
 }
 
-.settings div {
-    margin-top: 10px;
-}
-
-.settings div input {
+.settings input {
     width: 50px;
+    height: 1.5em;
     padding-left: 5px;
 }
 
-#mapWidth, #mapHeight {
-    width: 63px
-}
-
-.settings div.rgba input {
-    width: 50px;
-
-}
-
-.settings div input.check {
+.settings input#mapimage {
+    height: auto;
     width: auto;
+}
+
+.settings .button {
+    display: inline-block;
+    line-height: 1rem;
+    padding: 5px;
+    border: 1px black;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.settings button {
+    height: 1rem;
+}
+
+#mapWidth, #mapHeight {
+    width: 63px;
+}
+
+.settings input.check {
+    width: auto;
+    height: auto;
 }

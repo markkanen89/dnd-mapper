@@ -18,41 +18,35 @@
             <div class="settings-container">
                 <img src="settings-icon.jpg" alt="settings cog icon" id="settings-icon" onclick="ToggleSettings()">
                 <div class="settings">
-                    <div>
-                        Select map: <input type="file" id="mapimage">
-                    </div>
-                    <div>
-                        Map sizes,
-                        max-width: <input type="number" id="mapWidth" value="0" onchange="setMapSize()">
-                        max-height: <input type="number" id="mapHeight" value="0" onchange="setMapSize()"><br>
-                        Fit to screen: <input type="checkbox" id="mapFit" value="" class="check" onchange="setMapSize()">
-                    </div>
-                    <div>
-                        Grid tile size: <input type="number" id="tilesize" value="100" onchange="rebuildGrid()">
-                        Stroke width: <input type="number" id="strokeWidth" value="2" onchange="rebuildGrid()">
-                    </div>
-                    <div>
-                        Grid offset,
-                        x: <input type="number" id="offsetX" value="0" onchange="rebuildGrid()">
-                        y: <input type="number" id="offsetY" value="0" onchange="rebuildGrid()">
-                    </div>
-                    <div class="rgba">
-                        Color: rgba(
-                        <input type="number" id="r" value="0" max="255" min="0" onchange="rebuildGrid()">
-                        <input type="number" id="g" value="0" max="255" min="0" onchange="rebuildGrid()">
-                        <input type="number" id="b" value="0" max="255" min="0" onchange="rebuildGrid()">
-                        <input type="number" id="a" value="0.5" step="0.1" max="1" min="0" onchange="rebuildGrid()">
-                        )
-                    </div>
-                    <div>
-                        Rotate:
-                        <button type="button" id="rotateLeft" onclick="RotateImage('l')">&#8630;</button>
-                        <button type="button" id="rotateRight" onclick="RotateImage('r')">&#8631;</button>
-                    </div>
-                    <div>
-                        <button type="button" id="rebuild" onclick="rebuildGrid()">Build</button>
-                        <button type="button" id="openpage" onclick="openPage()">Open in new window</button>
-                    </div>
+                    Select map: <input type="file" id="mapimage">
+                    <br>
+                    Map sizes,
+                    max-width: <input type="number" id="mapWidth" value="1920" onchange="setMapSize()">
+                    max-height: <input type="number" id="mapHeight" value="1080" onchange="setMapSize()">
+                    <br>
+                    Fit to screen: <input type="checkbox" id="mapFit" value="" class="check" onchange="setMapSize()" checked>
+                    <br>
+                    Grid tile size: <input type="number" id="tilesize" value="100" onchange="rebuildGrid()">
+                    Stroke width: <input type="number" id="strokeWidth" value="2" onchange="rebuildGrid()">
+                    <br>
+                    Grid offset,
+                    x: <input type="number" id="offsetX" value="0" onchange="rebuildGrid()">
+                    y: <input type="number" id="offsetY" value="0" onchange="rebuildGrid()">
+                    <br>
+                    Color: rgba(
+                    <input type="number" id="r" value="0" max="255" min="0" onchange="rebuildGrid()">
+                    <input type="number" id="g" value="0" max="255" min="0" onchange="rebuildGrid()">
+                    <input type="number" id="b" value="0" max="255" min="0" onchange="rebuildGrid()">
+                    <input type="number" id="a" value="0.5" step="0.1" max="1" min="0" onchange="rebuildGrid()">
+                    )
+                    <br>
+                    Rotate:
+                    <div class="button" onclick="RotateImage('l')">&#8630;</div>
+                    <div class="button" onclick="RotateImage('r')">&#8631;</div>
+                    <br>
+                    <br>
+                    <div class="button" id="rebuild" onclick="rebuildGrid()">Build</div>
+                    <div class="button" id="openpage" onclick="openPage()">Open in new window</div>
                 </div>
             </div>
         </div>
