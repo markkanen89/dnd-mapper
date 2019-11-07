@@ -90,7 +90,10 @@ function setTileProperties() {
 
 function openPage(){
     var win = window.open('', '_blank', 'toolbar=0,location=0,menubar=0');
-    win.document.write(document.documentElement.innerHTML);
+    if (win) {
+        win.document.write(document.documentElement.innerHTML);
+    }
+
 }
 
 var rebuildGrid = function () {
